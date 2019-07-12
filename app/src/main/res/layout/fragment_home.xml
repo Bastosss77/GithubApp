@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/homeToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary">
+
+        <EditText
+                android:id="@+id/searchRepoEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableEnd="@drawable/ic_search"
+                android:inputType="text"
+                android:imeOptions="actionSearch"
+                android:hint="@string/home_searchRepositories"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <org.jazzilla.contentsquareapp.common.widget.EndlessRecyclerView
+            android:id="@+id/reposListRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/errorLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/errorImageView"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            tools:src="@drawable/ic_signal_wifi_off"/>
+
+        <TextView
+            android:id="@+id/errorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_medium"
+            tools:text="@string/home_errorNoInternetConnection"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

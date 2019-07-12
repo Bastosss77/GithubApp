@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ContentSquareApp</string>
+
+    <!-- Home -->
+    <string name="home_searchRepositories">Search by name</string>
+    <string name="home_errorNoRepository">Sad but it looks like there is no repositories to show</string>
+    <string name="home_errorNoInternetConnection">Ho ho, looks like you have no internet connection</string>
+    <string name="home_error">Crap ! Looks like something went wrong</string>
+
+    <!-- Repository -->
+    <string name="repository_overviewTabTitle">Overview</string>
+    <string name="repository_branchesTabTitle">Branches</string>
+    <string name="repository_contributorsTabTitle">Contributors</string>
+    <string name="repository_issuesTabTitle">Issues</string>
+    <string name="repository_pullRequestTabTitle">Pull Requests</string>
+</resources>

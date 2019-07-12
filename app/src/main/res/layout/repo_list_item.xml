@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin_medium">
+
+    <ImageView
+        android:id="@+id/ownerImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/repoNameTextView"
+        app:layout_constraintBottom_toBottomOf="@id/ownerNameTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:src="@drawable/ic_person" />
+
+    <TextView
+        android:id="@+id/repoNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:textSize="@dimen/home_repositoryName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ownerImageView"
+        tools:text="Repository name"/>
+
+    <TextView
+        android:id="@+id/ownerNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/repoNameTextView"
+        app:layout_constraintTop_toBottomOf="@id/repoNameTextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="Owner name"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_navigate_next"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
